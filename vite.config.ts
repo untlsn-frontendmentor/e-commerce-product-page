@@ -9,6 +9,7 @@ import AutoImport from 'unplugin-auto-import/vite';
 import { VitePWA } from 'vite-plugin-pwa';
 import Inspect from 'vite-plugin-inspect';
 import Unocss from 'unocss/vite';
+import svgLoader from 'vite-svg-loader';
 
 export default defineConfig({
   resolve: {
@@ -18,8 +19,10 @@ export default defineConfig({
     },
   },
   plugins: [
+    svgLoader(),
     Vue({
       include: [/\.vue$/],
+      reactivityTransform: true,
     }),
     Pages({
       extensions: ['vue'],
@@ -31,6 +34,7 @@ export default defineConfig({
         'vue-router',
         '@vueuse/head',
         '@vueuse/core',
+        'vue/macros',
       ],
       dts: 'src/auto-imports.d.ts',
     }),
@@ -89,13 +93,5 @@ export default defineConfig({
     exclude: [
       'vue-demi',
     ],
-  },
-
-  test: {
-    include: ['test/**/*.test.ts'],
-    environment: 'jsdom',
-    deps: {
-      inline: ['@vue', '@vueuse', 'vue-demi'],
-    },
   },
 });

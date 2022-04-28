@@ -4,7 +4,10 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
-    Button: typeof import('./components/Button.vue')['default']
+    CartBox: typeof import('./components/organisms/CartBox.vue')['default']
+    CartButton: typeof import('./components/atoms/CartButton.vue')['default']
+    Header: typeof import('./components/organisms/Header.vue')['default']
+    LeftNav: typeof import('./components/organisms/LeftNav.vue')['default']
   }
 }
 

@@ -2,7 +2,16 @@
 </script>
 
 <template>
-  <div class="flex items-center justify-center min-h-screen text-6xl <lg:text-red-500">
-    Hello World!
+  <div class="font-sans">
+    <Header />
+    <main>
+      <!--      <ImageScroller />-->
+      <!--      <Article-->
+      <!--        title="fall limited edition sneakers"-->
+      <!--        desc="These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer."-->
+      <!--        price={250}-->
+      <!--        discount={50}-->
+      <!--      />-->
+    </main>
   </div>
 </template>
