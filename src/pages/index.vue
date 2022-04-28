@@ -4,14 +4,10 @@
 <template>
   <div class="font-sans">
     <Header />
-    <main>
+    <main class="grid grid-cols-2 px-1/6 gap-1/12">
+      <div />
       <!--      <ImageScroller />-->
-      <!--      <Article-->
-      <!--        title="fall limited edition sneakers"-->
-      <!--        desc="These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer."-->
-      <!--        price={250}-->
-      <!--        discount={50}-->
-      <!--      />-->
+      <Desc />
     </main>
   </div>
 </template>

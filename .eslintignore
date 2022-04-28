@@ -1,3 +1,4 @@
 dist
 public
 src/components.d.ts
+auto-imports.d.ts
