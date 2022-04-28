@@ -1,5 +1,15 @@
 <script lang="ts" setup="">
+import cartStore from '~/store/cartStore';
+import image from '~/assets/images/image-product-1-thumbnail.jpg';
 
+const onSubmit = (count: number) => {
+  cartStore.products.push({
+    count,
+    price: 125,
+    name: 'Autumn Limited Edition',
+    image,
+  });
+};
 </script>
 
 <template>
@@ -13,6 +23,6 @@
       :price="250"
       :discount="50"
     />
-    <Submiter />
+    <Submiter @submit="onSubmit" />
   </article>
 </template>

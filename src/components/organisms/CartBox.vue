@@ -2,16 +2,13 @@
 import Trash from '~/assets/images/icon-delete.svg';
 import cartStore from '~/store/cartStore';
 
-const article = $ref({} as HTMLElement);
 </script>
 
 <template>
   <article
     v-if="cartStore.openBox"
-    :ref="article"
     tabindex="-1"
-    class="fixed top-18 left-0 bg-white z-1000 w-24/25 ml-1/50 rounded-xl"
-    @blur="cartStore.openBox = false"
+    class="fixed top-18 right-0 lg:right-12 bg-white z-1000 <lg:w-24/25 lg:(p-8 w-110) shadow-xl ml-1/50 rounded-xl"
   >
     <h1 class="py-5 pl-8 font-bold">
       Cart
@@ -38,6 +35,9 @@ const article = $ref({} as HTMLElement);
         </button>
       </li>
     </ul>
+    <Button v-if="cartStore.products.length" class="mt-6">
+      Checkout
+    </Button>
     <p v-else class="font-bold opacity-50 text-center py-24">
       Your cart is empty.
     </p>
