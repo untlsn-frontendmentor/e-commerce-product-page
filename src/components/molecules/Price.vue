@@ -14,7 +14,7 @@ const priceAfterDiscount = $computed(() => {
 <template>
   <section class="flex gap-2 <lg:items-center lg:flex-col justify-between">
     <div class="font-bold flex items-center">
-      <h1 class="pr-2 text-xl">
+      <h1 class="pr-2 text-2xl">
         ${{ priceAfterDiscount.toFixed(2) }}
       </h1>
       <p class="px-2 py-1 rounded bg-[#FDEEE1] text-[#FF7D1B] text-sm">

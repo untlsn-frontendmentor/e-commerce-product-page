@@ -11,7 +11,7 @@ watchEffect(() => {
 </script>
 
 <template>
-  <form class="lg:grid grid-cols-3 items-center gap-4">
+  <form class="lg:grid grid-cols-3 items-center gap-4 <lg:space-y-6">
     <div class="bg-[#F7F8FD] flex items-center px-6 py-4 justify-between rounded-xl">
       <button type="button" @click="value--">
         <img :src="minus" alt="minus">
@@ -29,3 +29,12 @@ watchEffect(() => {
     </Button>
   </form>
 </template>
+
+<style scoped>
+button {
+  @apply transition-opacity;
+}
+button:hover, button:focus {
+  @apply opacity-50;
+}
+</style>

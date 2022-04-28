@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <article>
+  <article class="<lg:px-1/10 <lg:space-y-6 lg:(min-h-150 flex flex-col gap-10)">
     <MainDesc
       producer="sneaker company"
       title="Fall Limited Edition Sneakers"

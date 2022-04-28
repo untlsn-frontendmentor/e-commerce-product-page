@@ -4,9 +4,8 @@
 <template>
   <div class="font-sans">
     <Header />
-    <main class="grid grid-cols-2 px-1/6 gap-1/12">
-      <div />
-      <!--      <ImageScroller />-->
+    <main class="lg:grid grid-cols-2 lg:px-1/6 gap-20 min-h-screen place-items-center">
+      <ImageScroller />
       <Desc />
     </main>
   </div>

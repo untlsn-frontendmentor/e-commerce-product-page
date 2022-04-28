@@ -9,6 +9,7 @@ declare module 'vue' {
     CartButton: typeof import('./components/atoms/CartButton.vue')['default']
     Desc: typeof import('./components/organisms/Desc.vue')['default']
     Header: typeof import('./components/organisms/Header.vue')['default']
+    ImageScroller: typeof import('./components/organisms/ImageScroller.vue')['default']
     LeftNav: typeof import('./components/organisms/LeftNav.vue')['default']
     MainDesc: typeof import('./components/molecules/MainDesc.vue')['default']
     Price: typeof import('./components/molecules/Price.vue')['default']

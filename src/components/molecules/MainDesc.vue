@@ -8,13 +8,13 @@ defineProps<{
 
 <template>
   <div>
-    <h3 class="uppercase text-[#FF7D1B]">
+    <h3 class="uppercase text-orange-300 font-bold <lg:mt-4">
       {{ producer }}
     </h3>
-    <h1 class="text-4xl font-bold mt-4 mb-8">
+    <h1 class="text-4xl lg:text-5xl font-bold my-4 <lg:mt-2">
       {{ title }}
     </h1>
-    <p class="opacity-50">
+    <p class="opacity-50 lg:text-lg">
       {{ desc }}
     </p>
   </div>

@@ -21,7 +21,6 @@ const fullCount = $computed(() => cartStore.products.reduce((acc, cur) => acc + 
     </p>
     <CartButton :count="fullCount" @click="cartStore.openBox = !cartStore.openBox" />
   </header>
-  <hr class="h-16">
   <LeftNav :open-nav="openNav" @close="openNav = false" />
   <CartBox />
 </template>
