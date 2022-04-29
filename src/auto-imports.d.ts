@@ -2,6 +2,7 @@
 // We suggest you to commit this file into source control
 declare global {
   const $: typeof import('vue/macros')['$']
+  const $_: typeof import('vue/macros')['$']
   const $$: typeof import('vue/macros')['$$']
   const $computed: typeof import('vue/macros')['$computed']
   const $customRef: typeof import('vue/macros')['$customRef']

@@ -2,7 +2,7 @@ const useImages = (imagesLength: number) => {
   const imagesIndex = imagesLength - 1;
   const curImage = ref(0);
   const curImageAnim = ref(0);
-  const imagePos = computed(() => {
+  const imagePos = computed<number>(() => {
     if (curImage.value == curImageAnim.value) return 0;
     if (curImage.value < curImageAnim.value) return -1;
     return 1;

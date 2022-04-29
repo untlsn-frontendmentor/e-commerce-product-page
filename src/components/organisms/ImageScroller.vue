@@ -15,7 +15,7 @@ const posTrans = {
   1: 'translate-x-100% duration-500',
 };
 
-const { imagePos, curImage, curImageAnim } = useImages(images.length);
+const { imagePos, curImage, curImageAnim } = $_(useImages(images.length));
 </script>
 
 <template>
