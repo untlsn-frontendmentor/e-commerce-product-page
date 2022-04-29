@@ -15,7 +15,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '~/': `${path.resolve(__dirname, 'src')}/`,
-      $css: '~/styles/bundle.js',
+      $css: path.resolve(__dirname, 'src/styles/bundle.js'),
     },
   },
   plugins: [
