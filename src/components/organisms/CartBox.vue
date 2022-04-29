@@ -30,12 +30,12 @@ import cartStore from '~/store/cartStore';
             </b>
           </p>
         </div>
-        <button @click="cartStore.products.splice(i, 1)">
+        <button class="hover:opacity-60" @click="cartStore.products.splice(i, 1)">
           <Trash />
         </button>
       </li>
     </ul>
-    <Button v-if="cartStore.products.length" class="mt-6">
+    <Button v-if="cartStore.products.length" class="mt-6 hover:opacity-60">
       Checkout
     </Button>
     <p v-else class="font-bold opacity-50 text-center py-24">

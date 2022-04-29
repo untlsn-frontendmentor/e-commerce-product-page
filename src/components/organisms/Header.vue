@@ -2,6 +2,7 @@
 import Menu from '~/assets/images/icon-menu.svg';
 import Logo from '~/assets/images/logo.svg';
 import cartStore from '~/store/cartStore';
+import avatar from '~/assets/images/image-avatar.png';
 
 const openNav = ref(false);
 
@@ -38,7 +39,8 @@ const fullCount = computed(() => cartStore.products.reduce((acc, cur) => acc + c
           </li>
         </ul>
       </nav>
-      <CartButton :count="fullCount" @click="cartStore.openBox = !cartStore.openBox" />
+      <CartButton class="hover:opacity-60" :count="fullCount" @click="cartStore.openBox = !cartStore.openBox" />
+      <img class="h-8 hover:opacity-60 cursor-pointer" :src="avatar" alt="avatar">
     </header>
   </div>
   <LeftNav :open-nav="openNav" @close="openNav = false" />
