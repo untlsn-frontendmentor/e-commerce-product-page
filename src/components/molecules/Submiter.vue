@@ -3,10 +3,10 @@ import minus from '~/assets/images/icon-minus.svg?url';
 import plus from '~/assets/images/icon-plus.svg?url';
 import Cart from '~/assets/images/icon-cart.svg';
 
-let value = $ref(1);
+let value = ref(1);
 
 watchEffect(() => {
-  if (value < 1) value = 1;
+  if (value.value < 1) value.value = 1;
 });
 
 defineEmits<{

@@ -4,7 +4,7 @@ const props = defineProps<{
   discount: number
 }>();
 
-const priceAfterDiscount = $computed(() => {
+const priceAfterDiscount = computed(() => {
   const percent = props.discount / 100;
   const minus = props.price * percent;
   return props.price - minus;

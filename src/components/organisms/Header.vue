@@ -1,12 +1,11 @@
 <script lang="ts" setup="">
-import { $ref } from 'vue/macros';
 import Menu from '~/assets/images/icon-menu.svg';
 import Logo from '~/assets/images/logo.svg';
 import cartStore from '~/store/cartStore';
 
-const openNav = $ref(false);
+const openNav = ref(false);
 
-const fullCount = $computed(() => cartStore.products.reduce((acc, cur) => acc + cur.count, 0));
+const fullCount = computed(() => cartStore.products.reduce((acc, cur) => acc + cur.count, 0));
 </script>
 
 <template>

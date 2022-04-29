@@ -22,7 +22,6 @@ export default defineConfig({
     svgLoader(),
     Vue({
       include: [/\.vue$/],
-      reactivityTransform: true,
     }),
     Pages({
       extensions: ['vue'],
