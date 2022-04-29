@@ -10,6 +10,7 @@ declare module 'vue' {
     Desc: typeof import('./components/organisms/Desc.vue')['default']
     Header: typeof import('./components/organisms/Header.vue')['default']
     ImageScroller: typeof import('./components/organisms/ImageScroller.vue')['default']
+    ImageScrollerCore: typeof import('./components/molecules/ImageScrollerCore.vue')['default']
     LeftNav: typeof import('./components/organisms/LeftNav.vue')['default']
     MainDesc: typeof import('./components/molecules/MainDesc.vue')['default']
     Price: typeof import('./components/molecules/Price.vue')['default']
