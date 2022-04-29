@@ -48,17 +48,14 @@ const fullCount = $computed(() => cartStore.products.reduce((acc, cur) => acc + 
 
 <style lang="scss">
 .nav-li li {
-  position: relative;
-  opacity: 0.5;
+  @apply transition-opacity relative opacity-50;
+  &::before {
+    @apply transition-opacity opacity-0 w-full h-3px bg-[#FF7D1B] -bottom-6 absolute content-[''];
+  }
   &:hover, &:focus {
     opacity: 1;
     &::before {
-      content: '';
-      position: absolute;
-      bottom: -24px;
-      background-color: #FF7D1B;
-      height: 3px;
-      width: 100%;
+      opacity: 1;
     }
   }
 }

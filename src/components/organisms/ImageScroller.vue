@@ -5,9 +5,9 @@ import image3 from '~/assets/images/image-product-3.jpg';
 import image4 from '~/assets/images/image-product-4.jpg';
 import Next from '~/assets/images/icon-next.svg';
 import Previous from '~/assets/images/icon-previous.svg';
+import useImages from '~/hooks/useImages';
 
 const images = [image1, image2, image3, image4];
-const imagesIndex = images.length - 1;
 
 const posTrans = {
   '-1': '-translate-x-100% duration-500',
@@ -15,26 +15,7 @@ const posTrans = {
   1: 'translate-x-100% duration-500',
 };
 
-let curImage = $ref(0);
-let curImageAnim = $ref(0);
-const imagePos = $computed(() => {
-  if (curImage == curImageAnim) return 0;
-  if (curImage < curImageAnim) return -1;
-  return 1;
-});
-
-watchEffect(() => {
-  if (curImageAnim < 0) curImageAnim = 0;
-  else if (curImageAnim > imagesIndex) curImageAnim = imagesIndex;
-});
-
-watchEffect(() => {
-  if (imagePos != 0) {
-    setTimeout(() => {
-      curImage = curImageAnim;
-    }, 500);
-  }
-});
+const { imagePos, curImage, curImageAnim } = useImages(images.length);
 </script>
 
 <template>
@@ -81,6 +62,6 @@ watchEffect(() => {
 
 <style>
 .change-button {
-  @apply absolute rounded-full p-4 bg-white h-12 w-12;
+  @apply absolute rounded-full p-4 bg-white h-12 w-12 lg:hidden;
 }
 </style>
